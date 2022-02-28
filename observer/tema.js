@@ -15,7 +15,7 @@ CrearTema(usuari, tema){
     if(usuari.nom === undefined){
         console.log(`el usuario no está registrado`);
     } else {
-    console.log(`el usuario: '${usuari.nom}' a creado el tema: '${tema}'`);
+    console.log(`el usuario: '${usuari.nom}' ha creado el tema: '${tema}'`);
     this.temas.push(tema);
     }
 
