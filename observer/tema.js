@@ -2,7 +2,7 @@ const EventEmitter = require('events');
 let emitter = new EventEmitter();
 
 emitter.on('mensaje', (usuari, mensaje, tema) => {
-    console.log(`hi, el usuario: '${usuari.nom}' a mandado el siguiente mensaje: '${mensaje} en el tema: '${tema}'`);
+    console.log(`hi, el usuario: '${usuari.nom}' ha mandado el siguiente mensaje: '${mensaje} en el tema: '${tema}'`);
 });
 
 class Tema{
