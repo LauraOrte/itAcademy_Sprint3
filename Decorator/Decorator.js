@@ -4,11 +4,11 @@ const div = require('./currency_conversions.json');
 function convertidor(Producto, divisa) {
         try {
             const regex = new RegExp(Producto.divisa + '_' + divisa);
-            const conversion = Producto.precio * Object.entries(div).find(n => regex.test(n))[1]
+            const Producto.precioEur = Producto.precio * Object.entries(div).find(n => regex.test(n))[1]
 
             console.log(`Se hará la conversión de: ${Producto.divisa} a ${divisa}`);
 
-            console.log(`${Producto.nom} ${Producto.modelo} con un precio de: ${Producto.precio} ${Producto.divisa} será de: ${conversion.toFixed(2)} ${divisa} en el cambio de divisa`);
+            console.log(`${Producto.nom} ${Producto.modelo} con un precio de: ${Producto.precio} ${Producto.divisa} será de: ${Producto.precioEur.toFixed(2)} ${divisa} en el cambio de divisa`);
         } catch (error) {
             if(divisa !== 'EUR'){
                 console.log('Solo se puede hacer la conversión a Euros');
